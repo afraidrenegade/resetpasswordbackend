@@ -266,7 +266,7 @@ app.post("/sendresettoken", async (req, res) => {
     if (success) {
       await newResetToken.save();
       return res.status(200).json({
-        message: "Check your email for a reset token. Token expires in an hour",
+        message: "Check your email for a reset token. Token expires in an hour", code: 200,
       });
     } else {
       return res.status(500).json({ error: "An internal server error occurred" });
