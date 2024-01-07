@@ -300,7 +300,7 @@ app.post("/reset", async (req, res) => {
     // Delete the used reset token
     await ResetToken.deleteOne({ token });
 
-    return res.status(200).json({ message: "Password reset successful" });
+    return res.status(200).json({ message: "Password reset successful", code: 200});
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
