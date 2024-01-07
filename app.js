@@ -306,7 +306,7 @@ app.post("/reset", async (req, res) => {
   }
 });
 
-https: server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
 
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
